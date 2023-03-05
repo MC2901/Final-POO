@@ -1,0 +1,62 @@
+@startuml
+class garaje.src.Moto {
+- double cilindrada
++ <<Create>> Moto(String,double,String,Client,double)
++ double getCilindrada()
+}
+class garaje.src.GarajeTest {
++ {static} void main(String[])
+}
+class garaje.src.Client {
+- String clientName
+- String clientPlate
+- String expectedResult
+- int points
++ <<Create>> Client(String,String,String)
++ void addPoints()
++ int getPoints()
++ String getClientName()
++ void setClientName(String)
++ String getClientPlate()
++ void setClientPlate(String)
++ String getExpectedResult()
++ void setExpectedResult(String)
+}
+class garaje.src.Coche {
+- int numPuertas
++ <<Create>> Coche(String,double,String,Client,int)
++ int getNumPuertas()
+}
+class garaje.src.Garaje {
+- double precioCambioRueda
+- int capacidadMaxima
+- int numVehiculosActuales
+- ArrayList<Vehiculo> listaVehiculos
++ <<Create>> Garaje(double,int)
++ boolean ingresarVehiculo(Vehiculo,Client)
++ boolean retirarVehiculo(Vehiculo)
++ int getNumVehiculosActuales()
++ double getPrecioCambioRueda()
++ double getPrecioCambioRuedasTotal()
++ double getKilometrajeMedio()
++ void imprimirInformacionGaraje()
++ void imprimirInformacionVehiculos()
+}
+class garaje.src.Vehiculo {
+- String marca
+- double kilometraje
+- String matriculaCliente
+- Client cliente
++ <<Create>> Vehiculo(String,double,String,Client)
++ String getMarca()
++ double getKilometraje()
++ String getMatriculaCliente()
++ void setMatriculaCliente(String)
++ Client getCliente()
++ void setCliente(Client)
+}
+
+
+garaje.src.Vehiculo <|-- garaje.src.Moto
+garaje.src.Vehiculo <|-- garaje.src.Coche
+@enduml

@@ -1,0 +1,74 @@
+@startuml
+class mundial.src.Keys {
++ void generateMatches(ArrayList<Team>)
++ ArrayList<Team> getNextStageTeams()
+}
+class mundial.src.Team {
+- String teamName
+- ArrayList<Match> matchesPlayed
+- int points
++ int addedPoints
+~ <<Create>> Team()
++ <<Create>> Team(String)
++ void addPoints()
++ String getTeamName()
++ void setTeamName(String)
++ int getPoints()
++ void setPoints(int)
+}
+class mundial.src.MundialStage {
+- String stage
+- ArrayList<Match> matchList
+# ArrayList<Team> nextStageTeams
++ <<Create>> MundialStage()
++ ArrayList<Match> addMatch(Match)
++ void generateMarker(ArrayList<Match>)
++ ArrayList<Match> getMatchList()
++ void setMatchList(ArrayList<Match>)
++ String getStage()
++ void setStage(String)
++ ArrayList<Team> getNextStageTeams()
++ void setNextStageTeams(ArrayList<Team>)
+}
+class mundial.src.Main {
++ {static} void main(String[])
+}
+class mundial.src.Result {
+- int localGoals
+- int visitingGoals
++ boolean localWin()
++ boolean draw()
++ int getLocalGoals()
++ int getVisitingGoals()
++ void setLocalGoals(int)
++ void setVisitingGoals(int)
+}
+class mundial.src.Match {
+- Date dateMatch
+- Team localTeam
+- Team visitingTeam
+- Result resultMatch
++ <<Create>> Match()
++ <<Create>> Match(Team,Team,Date,Result)
++ <<Create>> Match(Team,Team,Date)
++ void makeGoal()
++ Date getDateMatch()
++ void setDateMatch(Date)
++ Team getLocalTeam()
++ void setLocalTeam(Team)
++ Team getVisitingTeam()
++ void setVisitingTeam(Team)
++ Result getResultMatch()
++ void setResultMatch(Result)
+}
+class mundial.src.Group {
++ <<Create>> Group()
++ void generateMatch(ArrayList<Team>)
++ ArrayList<Team> getNextStageTeams()
++ void generateMarker(ArrayList<Match>)
+}
+
+
+mundial.src.MundialStage <|-- mundial.src.Keys
+mundial.src.MundialStage <|-- mundial.src.Group
+@enduml
