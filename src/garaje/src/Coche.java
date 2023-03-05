@@ -1,3 +1,5 @@
+package garaje.src;
+
 //Clase Hija Coche
 public class Coche extends Vehiculo {
     private int numPuertas;

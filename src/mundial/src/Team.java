@@ -1,3 +1,5 @@
+package mundial.src;
+
 import java.util.ArrayList;
 
 public class Team {
@@ -35,10 +37,6 @@ public class Team {
 
     public void setTeamName(String teamName) {
         this.teamName = teamName;
-    }
-
-    public ArrayList<Match> getMatchesPlayed() {
-        return matchesPlayed;
     }
 
     public int getPoints() {

@@ -1,3 +1,5 @@
+package mundial.src;
+
 import java.util.ArrayList;
 
 public class MundialStage {
@@ -64,4 +66,5 @@ public class MundialStage {
     public void setNextStageTeams(ArrayList<Team> nextStageTeams) {
         this.nextStageTeams = nextStageTeams;
     }
+
 }

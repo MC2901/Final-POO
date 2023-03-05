@@ -1,3 +1,5 @@
+package mundial.src;
+
 public class Result {
     private int localGoals;
     private int visitingGoals;

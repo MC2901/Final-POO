@@ -1,3 +1,11 @@
+import garaje.src.Client;
+import garaje.src.Coche;
+import garaje.src.Garaje;
+import garaje.src.Moto;
+import mundial.src.Group;
+import mundial.src.Keys;
+import mundial.src.Team;
+
 import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
@@ -222,12 +230,19 @@ public class Main {
                 "____________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ \n" +
                 "__________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶ \n" +
                 "_________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶\n"));
-
+        Client cliente = new Client("Matias", "AF005333", "River Plate");
+        if (cliente.getExpectedResult() == winner.get(0).getTeamName()){
+            cliente.addPoints();
+            System.out.println("Ganaste, tus puntos son: " + cliente.getPoints());
+        } else {
+            System.out.println("No sumaste puntos :(");
+        }
         Garaje garaje = new Garaje(50, 5);
         garaje.ingresarVehiculo(new Coche("Ford", 20000, 4));
         garaje.ingresarVehiculo(new Coche("BMW", 15000, 2));
         garaje.ingresarVehiculo(new Moto("Yamaha", 10000, 600));
         garaje.ingresarVehiculo(new Moto("Honda", 8000, 750));
+
         System.out.println("\n\n\n\n\n____//_]|________         ____//__][__][___|     ____//__][______||\n" +
                 "(o _ |  -|   _  o|        (o  _|  -|     _ o|    (o _ |  -|   _   o|\n" +
                 " `(_)-------(_)--'         `-(_)--------(_)-'     `(_)-------(_)---'");

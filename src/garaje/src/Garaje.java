@@ -1,3 +1,5 @@
+package garaje.src;
+
 import java.util.ArrayList;
 
 public class Garaje {

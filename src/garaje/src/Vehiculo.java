@@ -1,3 +1,5 @@
+package garaje.src;
+
 //Clase Padre Vehiculo
 public class Vehiculo {
     private String marca;

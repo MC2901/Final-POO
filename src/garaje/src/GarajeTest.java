@@ -1,3 +1,5 @@
+package garaje.src;
+
 public class GarajeTest {
     public static void main(String[] args) {
         Garaje garaje = new Garaje(50, 5);

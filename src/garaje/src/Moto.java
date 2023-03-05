@@ -1,3 +1,5 @@
+package garaje.src;
+
 //Clase Hija Moto
 public class Moto extends Vehiculo {
     private double cilindrada;
