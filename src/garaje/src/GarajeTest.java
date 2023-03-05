@@ -1,47 +1,37 @@
 package garaje.src;
 
+import java.util.ArrayList;
+
 public class GarajeTest {
     public static void main(String[] args) {
-        Garaje garaje = new Garaje(50, 5);
-        garaje.ingresarVehiculo(new Coche("Ford", 20000, 4));
-        garaje.ingresarVehiculo(new Coche("BMW", 15000, 2));
-        garaje.ingresarVehiculo(new Moto("Yamaha", 10000, 600));
-        garaje.ingresarVehiculo(new Moto("Honda", 8000, 750));
-        System.out.println("____//_]|________         ____//__][__][___|     ____//__][______||\n" +
+        ArrayList<Client> clientes = new ArrayList<>();
+
+// Creamos los clientes y los agregamos al ArrayList
+        Client cliente1 = new Client("Matias", "AF005333", "River Plate");
+        clientes.add(cliente1);
+
+        Client cliente2 = new Client("Lucas", "AF005334", "Gimnasia y Esgrima");
+        clientes.add(cliente2);
+
+        Client cliente3 = new Client("Juan", "AF005234", "Boca Juniors");
+        clientes.add(cliente3);
+
+        Client cliente4 = new Client("Gandolfo", "AF005336", "Platense");
+        clientes.add(cliente4);
+
+        Garaje garaje = new Garaje(500, 5);
+        Coche coche1 = new Coche("Ford", 20000, "AF005333", cliente1,4 );
+        Coche coche2 = new Coche("BMW", 15000, "BD000123", cliente2, 3);
+        Moto moto1 = new Moto("Yamaha", 10000, "CC002345", cliente3, 700);
+        Moto moto2 = new Moto("Honda", 8000, "AF004342", cliente4, 1200);
+
+        System.out.println("\n\n\n\n\n____//_]|________         ____//__][__][___|     ____//__][______||\n" +
                 "(o _ |  -|   _  o|        (o  _|  -|     _ o|    (o _ |  -|   _   o|\n" +
                 " `(_)-------(_)--'         `-(_)--------(_)-'     `(_)-------(_)---'");
-        garaje.imprimirInformacionGaraje();
-        garaje.imprimirInformacionVehiculos();
-        System.out.println("(|\n" +
-                "                                                   ||_    \n" +
-                "                                                  =///`\\   \n" +
-                "                             (\\                   \\\\\\) | \n" +
-                "                            __\\\\                   `|~~|    \n" +
-                "                           (((<_|            ____   |  |     \n" +
-                "                            `-__/\\         /~    ~\\|   |    \n" +
-                "                               \\  ~-_     |--|     |___|    \n" +
-                "                                `\\   ~-_  |_/     /--__/   \n" +
-                "                                  `\\/ / ~-_\\___--/    /   \n" +
-                "                                    `-_    ~/   /    /   \n" +
-                "                                       ~-_ /   |   _/   \n" +
-                "                                          |         |\n" +
-                "                                         |~~~~~-----| \n" +
-                "                                         |___----~~~/\n" +
-                "              _-~~\\                       \\_       /\n" +
-                "            /(_|_-~                       |       /                          \n" +
-                "          /   /~==[]\\     ____-------_    |_____--|   ______________       \n" +
-                "        /    (_ //(\\0)~~~~    YAMAHA  ~\\ /_-       \\/'         ___/ ~~~~/  \n" +
-                "       (|      ~~--__                   |/         )_____---~~~    YZF  \\    \n" +
-                "        \\.      ___  ~~--__ ____        /        _-/              __--~~'  \n" +
-                "          ~\\    \\\\\\\\       ~~-_ ~-____ /      _-~~          __--~~___ \n" +
-                "     _ ----/ \\    \\\\\\\\         ~-_    /---__-~        __--~~----~~_  ]=\n" +
-                "  _-~ ___ / /__\\   ~~~            ~-_ ( )-~ ~-_~~~/~~~ _-~         ~-_ \n" +
-                " /-~~~_-|/ /    ~\\                  _) ~-_     \\ /~~~~~---__-----_    \\\n" +
-                ";    / \\/_//`\\    \\           __--~~/_   \\~-_ _-\\ ~~~~~~~~~~~~-/_/\\    .\n" +
-                "|   | \\((*))/ |   |\\    __--~~     /o \\   `\\ ~-  `\\----_____( 0) ) |   | \n" +
-                "|    \\  |~|  /    | )-~~           \\ 0 )    |/' _-~/~--------| |~ /    ,\n" +
-                " \\    ~-----~    / /                ~~~~~~~~/_/O_/'   \\    ~-----~    /\n" +
-                "  ~-_         _-~ `---------------------------'        `-_         _-~\n" +
-                "     ~ ----- ~                                            ~ ----- ~  -TX");
+
+        garaje.ingresarVehiculo(coche1, cliente1);
+        garaje.ingresarVehiculo(coche2, cliente2);
+        garaje.ingresarVehiculo(moto1, cliente3);
+        garaje.ingresarVehiculo(moto2, cliente4);
     }
 }
