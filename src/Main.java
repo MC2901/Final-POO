@@ -1,5 +1,5 @@
 import garaje.src.Client;
-import garaje.src.Coche;
+import garaje.src.Car;
 import garaje.src.Garaje;
 import garaje.src.Moto;
 import mundial.src.Group;
@@ -259,8 +259,8 @@ public class Main {
 
 
         Garaje garaje = new Garaje(500, 5);
-        Coche coche1 = new Coche("Ford", 20000, "AF005333", cliente1,4 );
-        Coche coche2 = new Coche("BMW", 15000, "BD000123", cliente2, 3);
+        Car coche1 = new Car("Ford", 20000, "AF005333", cliente1,4 );
+        Car coche2 = new Car("BMW", 15000, "BD000123", cliente2, 3);
         Moto moto1 = new Moto("Yamaha", 10000, "CC002345", cliente3, 700);
         Moto moto2 = new Moto("Honda", 8000, "AF004342", cliente4, 1200);
 

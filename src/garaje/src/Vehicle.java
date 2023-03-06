@@ -1,4 +1,5 @@
 package garaje.src;
+import garaje.src.Client;
 
 public class Vehicle {
     private String marca; // Atributo para almacenar la marca del vehículo
