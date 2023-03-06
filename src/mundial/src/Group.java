@@ -44,8 +44,14 @@ public class Group extends MundialStage {
         this.setStage("Fase de Grupos");
     }
 
+    /**
+     * Genera el marcador para cada partido del grupo.
+     * @param matches - los partidos del grupo
+     */
     @Override
     public void generateMarker(ArrayList<Match> matches) {
+        // Llama a la función generateMarker de la superclase MundialStage
         super.generateMarker(matches);
     }
+
 }
